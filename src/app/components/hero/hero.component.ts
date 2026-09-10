@@ -15,6 +15,8 @@ export class HeroComponent {
   readonly name = 'Shady Mohamed';
   readonly role = 'Software Testing Engineer';
   readonly portraitSrc = 'assets/1742333684807.jpg'; // replace with your own image path
+  readonly resumePath = 'Shady Mohamed CV.pdf';
+  readonly fileName = 'Shady Mohamed CV.pdf';
   readonly summary =
     'ISTQB Foundation Level V4.0 certified QA engineer covering manual, API, automation and performance testing for web platforms — from test case design through defect closure, across e‑commerce, healthcare and SaaS products.';
 

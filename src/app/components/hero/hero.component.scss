@@ -106,6 +106,49 @@ h1.name {
   }
 }
 
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 14px 28px;
+  background: var(--pass);
+  color: var(--bg);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid var(--pass);
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.7s;
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: transparent;
+    color: var(--pass);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+
+    svg {
+      transform: translateY(2px);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (width <= 890px) {
+    margin-inline: auto;
+  }
+}
+
 .hero-stats {
   margin-top: 44px;
   display: grid;
@@ -113,7 +156,7 @@ h1.name {
   gap: 36px;
   opacity: 0;
   animation: fadeUp 0.7s ease forwards;
-  animation-delay: 0.75s;
+  animation-delay: 0.85s;
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(2, 1fr);
