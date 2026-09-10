@@ -1,0 +1,59 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+}
+
+.brand {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--pass);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--pass);
+    box-shadow: 0 0 8px var(--pass);
+    animation: blink 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.navlinks {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  color: var(--text-dim);
+
+  a {
+    transition: color .2s;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+}

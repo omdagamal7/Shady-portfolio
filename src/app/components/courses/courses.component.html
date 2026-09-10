@@ -1,0 +1,17 @@
+<section id="courses">
+  <div class="section-head" appRevealOnScroll>
+    <span class="idx">04</span>
+    <h2>Certifications &amp; courses</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="course-list">
+    <div class="course" *ngFor="let c of courses" appRevealOnScroll>
+      <div>
+        <div class="course-name">{{ c.name }}</div>
+        <div class="course-org">{{ c.org }}</div>
+      </div>
+      <div class="course-date">{{ c.date }}</div>
+    </div>
+  </div>
+</section>

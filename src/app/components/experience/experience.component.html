@@ -1,0 +1,24 @@
+<section id="experience">
+  <div class="section-head" appRevealOnScroll>
+    <span class="idx">01</span>
+    <h2>Experience log</h2>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="suite">
+    <div
+      class="case"
+      *ngFor="let item of cases"
+      [class.current]="item.current"
+      appRevealOnScroll
+    >
+      <div class="case-top">
+        <span class="badge" [class.running]="item.status === 'RUNNING'">{{ item.status }}</span>
+        <span class="case-role">{{ item.role }}</span>
+        <span class="case-org">&#64; {{ item.org }}</span>
+        <span class="case-time">{{ item.time }}</span>
+      </div>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+</section>

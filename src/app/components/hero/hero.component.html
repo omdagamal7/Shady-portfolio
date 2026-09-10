@@ -1,0 +1,26 @@
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <img class="portrait" src="https://egy-cards.s3.eu-central-1.amazonaws.com/category/61483afc-b70f-4813-b6e0-a7db2974637c-1742333684807.jpg" [alt]="name" />
+      <div>
+        <div class="run-id">
+          {{ buildId }} <span class="sep">/</span> status
+          <span style="color: var(--pass)">{{ status }}</span>
+        </div>
+        <h1 class="name">{{ name }}</h1>
+        <div class="role-line">{{ role }}</div>
+      </div>
+    </div>
+    <p class="hero-summary">{{ summary }}</p>
+    <div class="hero-stats">
+      <div class="stat" *ngFor="let stat of stats">
+        <b>{{ stat.value }}</b>
+        <span>{{ stat.label }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>scroll<span class="line"></span></span>
+  </div>
+</header>

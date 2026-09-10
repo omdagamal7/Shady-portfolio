@@ -1,0 +1,8 @@
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>shady.sobh</div>
+    <div class="navlinks">
+      <a *ngFor="let link of links" [href]="link.href">{{ link.label }}</a>
+    </div>
+  </div>
+</nav>

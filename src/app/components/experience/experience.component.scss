@@ -1,0 +1,88 @@
+.suite {
+  border-left: 2px solid var(--line);
+  padding-left: 26px;
+  margin-left: 6px;
+  position: relative;
+}
+
+.case {
+  position: relative;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .55s ease, transform .55s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -32.5px;
+    top: 26px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--pass);
+    box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--line);
+  }
+
+  &.current::before {
+    box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--pass-dim), 0 0 10px var(--pass);
+  }
+}
+
+.case-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .03em;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: var(--pass-dim);
+  color: var(--pass);
+  border: 1px solid rgba(61, 220, 151, 0.3);
+
+  &.running {
+    background: rgba(232, 179, 57, 0.12);
+    color: var(--amber);
+    border-color: rgba(232, 179, 57, 0.3);
+  }
+}
+
+.case-role {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.case-org {
+  color: var(--pass);
+  font-weight: 500;
+}
+
+.case-time {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-left: auto;
+}
+
+.case p {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  max-width: 640px;
+}

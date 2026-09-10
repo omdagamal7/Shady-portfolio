@@ -1,0 +1,25 @@
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-head">Let's talk quality.</div>
+
+    <div class="contact-links">
+      <a
+        *ngFor="let link of links"
+        [href]="link.href"
+        [attr.target]="link.external ? '_blank' : null"
+        [attr.rel]="link.external ? 'noopener' : null"
+      >
+        {{ link.icon }} {{ link.label }}
+      </a>
+      <span
+        style="font-family: var(--font-mono); font-size: 14px; padding: 12px 18px; color: var(--text-dim);"
+        >{{ location }}</span
+      >
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; {{ year }} {{ name }}</span>
+      <span>all tests passing</span>
+    </div>
+  </div>
+</footer>
